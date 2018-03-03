@@ -19,11 +19,13 @@ public double interest(int amount)
 		interest = (amount * 0.08);
 	}
 	return interest;
+	
 }
 public int interestType(double interest) 
 {
 	return 0; 
 // code to determine accounts with no interest goes here 
+// this is test comment 
 } 
 }
 
