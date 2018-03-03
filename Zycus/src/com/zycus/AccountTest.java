@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class AccountTest {
 
+	// This function find the no of accounts from given Student ID
 	public static int findNoOfAccounts(String sid) {
 		int greatest = Integer.MIN_VALUE;
 		for (int i = 0; i < sid.length(); i++) {
@@ -20,6 +21,8 @@ public class AccountTest {
 		return greatest;
 	}
 
+	// This is the main function to get the student ID and account amount and
+	// calculate interests
 	public static void main(String[] args) {
 		Account a = new Account();
 		System.out.println("Welcome to your Banking App");
@@ -35,6 +38,7 @@ public class AccountTest {
 			accounts[i] = sc.nextInt();
 			System.out.println("The interest for account number " + (i + 1) + " is " + a.interest(accounts[i]));
 		}
+		sc.close();
 		double sumOfInterst = 0;
 		ArrayList<Double> intrests = new ArrayList<>();
 		for (int num : accounts) {

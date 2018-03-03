@@ -9,6 +9,7 @@ public class Account {
 		this.interest = 0;
 	}
 
+	// This function calculates interest for the given amount
 	public double interest(int amount) {
 		if (amount > 0 && amount < 1001) {
 			interest = 0;
@@ -23,6 +24,7 @@ public class Account {
 
 	}
 
+	// This function determines accounts with no interest
 	public int interestType(ArrayList<Double> interests) {
 		int zeroInterestAccounts = 0;
 		for (Double interest : interests) {
@@ -31,7 +33,5 @@ public class Account {
 			}
 		}
 		return zeroInterestAccounts;
-		// code to determine accounts with no interest goes here
-		// this is test comment
 	}
 }
