@@ -1,5 +1,7 @@
 package com.zycus;
 
+import java.util.ArrayList;
+
 public class Account 
 { 
 	double interest;
@@ -21,9 +23,15 @@ public double interest(int amount)
 	return interest;
 	
 }
-public int interestType(double interest) 
+public int interestType(ArrayList<Double> interests) 
 {
-	return 0; 
+	int zeroInterestAccounts = 0;
+	for(Double interest : interests) {
+		if(interest == 0 ){
+			zeroInterestAccounts += 1;
+		}
+	}
+	return zeroInterestAccounts; 
 // code to determine accounts with no interest goes here 
 // this is test comment 
 } 

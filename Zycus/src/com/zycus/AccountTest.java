@@ -34,11 +34,9 @@ public class AccountTest {
 			accounts[i] = sc.nextInt();	
 			System.out.println("The interest for account number " + (i+1) + " is " + a.interest(accounts[i]));
 		}
-		int sum = 0;
 		double sumOfInterst = 0;
 		ArrayList<Double>intrests= new ArrayList<>();
-		for( int num : accounts) {
-		 	
+		for( int num : accounts) {	
 		 	double ba =a.interest(num);
 		 	sumOfInterst += ba;
 		 	intrests.add(ba);      
@@ -48,5 +46,6 @@ public class AccountTest {
 	    System.out.println("Lowest Interest: " + Collections.min(intrests));
 	    System.out.println("Highest Interest: " + Collections.max(intrests));
 	    System.out.println("Average Interest:"+ (sumOfInterst/accounts.length));  
+	    System.out.println("Number of accounts with no interest: " + a.interestType(intrests));
 	}	
 }
