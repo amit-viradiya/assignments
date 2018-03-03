@@ -21,7 +21,6 @@ public class Account {
 			interest = (amount * 0.08);
 		}
 		return interest;
-
 	}
 
 	// This function determines accounts with no interest
